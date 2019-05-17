@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!--float 属性会造成height未设置的情况下 height=0 ,高度塌陷  可以设置overflow处理-->
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        盒模型1
+    </title>
+    <style type="text/css">
+        /*首先去掉margin padding*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: #f00;
+
+        }
+
+        .box2 {
+
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+        }
+
+        h1 {
+            background: #0ff;
+            width: 800px;
+            height: 200px;
+            text-align: center;
+            /* margin: 0 auto; */
+            /*可以让水平居中*/
+            line-height: 200px;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background: #ff0;
+            overflow: hidden;
+        }
+        /*当父级子元素都解决了margin是 子级的margin会传递给父元素
+        解决的办法是给父级使用:overflow:hidden属性*/
+        
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background: #00f;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h1>北京千锋互联科技有限公司</h1>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

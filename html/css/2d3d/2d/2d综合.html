@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        2d综合
+    </title>
+
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 100px auto;
+            transition: all 2s;
+        }
+
+        div:nth-child(1):hover {
+            transform: translateX(200px);
+        }
+
+        div:nth-child(2):hover {
+            transform: rotate(90deg);
+        }
+
+        div:nth-child(3):hover {
+            transform: scale(2, .5);
+        }
+
+        div:nth-child(4):hover {
+            transform: skew(30deg, 30deg);
+        }
+
+        div:nth-child(5):hover {
+            transform: rotate(90deg) translateX(200px) scale(2, .5) skew(30deg, 30deg)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>2d平移</div>
+    <div>2d旋转</div>
+    <div>2d缩放</div>
+    <div>2d扭曲</div>
+    <div>2d综合</div>
+</body>
+
+</html>

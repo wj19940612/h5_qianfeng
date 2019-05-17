@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件驱动函数</title>
+
+
+    <script type="text/javascript">
+
+        //页面加载完成以后执行
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var text = document.getElementById("text");
+
+            btn.onclick = function () {
+                text.value="";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="清空" id="btn" />
+    <input type="text" value="默认的文字" id="text" placeholder="请输入文字" />
+</body>
+
+<script type="text/javascript">
+    /*
+        这种写法一般不适用  script写在head中
+    */
+    // var btn = document.getElementById("btn");
+
+    // alert(btn);
+</script>
+
+</html>

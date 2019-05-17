@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        3d
+    </title>
+
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            /* transition: all 2s; */
+            position: relative;
+            /*将动画绑定*/
+            animation: move 2s;
+
+            /*
+            /* 延迟2s
+            animation-delay: 2s;
+            /*无限重复播放*/
+            animation-iteration-count: infinite;
+            /*反向运动*/
+            animation-direction: alternate;
+        }
+
+        /* .box:hover {
+            transform: translateX(200px);
+        } */
+        @keyframes move {
+            /* from{
+                left: 0;
+                top: 0;
+            }
+
+            to{
+                left: 200px;
+                top: 0px;
+            } */
+
+            0% {
+                left: 0;
+                top: 0%;
+            }
+
+            25% {
+                left: 200px;
+                top: 0;
+                transform: scale(2);
+                background: #0f0;
+            }
+
+            50% {
+                left: 200px;
+                top: 200px;
+                transform: scale(3);
+                background: #00f;
+            }
+
+            75% {
+                left: 0px;
+                top: 200px;
+                transform: scale(2);
+                background: #ff0;
+            }
+
+            100% {
+                left: 0px;
+                top: 0;
+                background: #f00;
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+
+</html>

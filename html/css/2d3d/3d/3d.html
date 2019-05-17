@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        3d
+    </title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            width: 1000px;
+            /* height: 300px; */
+            background: #eee;
+            margin:  auto;
+            overflow: hidden;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            float: left;
+            margin: 20px;
+            /*会保留在系子元素上面*/
+            transform-style: preserve-3d;
+            /*取值越大 3d效果越明显*/
+            /*一般在1200 - 2000数值*/
+            perspective: 800px;
+        }
+
+        span {
+            text-align: center;
+            min-height: 200px;
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 0, 0, .5);
+            transition: all 2s;
+        }
+
+        p:nth-child(1) span:hover {
+            transform: rotateX(45deg);
+        }
+
+/* 
+        p:nth-child(2) span:hover {
+            transform: rotateY(45deg);
+        }
+
+        p:nth-child(3) span:hover {
+            transform: rotateZ(45deg);
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <!-- <p><span>x轴旋转</span></p> -->
+        <!-- <p><span>y轴旋转</span></p>
+        <p><span>z轴旋转</span></p> -->
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+        <p><span>x轴旋转</span></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        表单高级
+    </title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        form {
+            width: 600px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .fd1 {
+            border: 1px #f00 dashed;
+        }
+
+        .ld1 {
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="f1" method="POST" action="">
+        <!--必须是第一个元素-->
+        <legend class="ld1">
+            用户登录
+        </legend>
+        <fieldset class="fd1">
+
+            <p>姓名：<input type="text" placeholder="请输入姓名" /></p>
+            <p>密码：<input type="password" /></p>
+        </fieldset>
+        <fieldset>
+            <legend>
+                用户注册
+            </legend>
+            <p><input type="submit" /> <input type="reset"></p>
+            <p> 性别:<label for="sexMale">男</label><input type="radio" name="sex" id="sexMale" />
+                <label for="sexFemale">女</label><input type="radio" name="sex" id="sexFemale" /></p>
+            <p>爱好:聊天<input type="checkbox" name="like" /> 篮球<input type="checkbox" name="like" />
+                游泳：<input type="checkbox" name="like" />足球:<input type="checkbox" name="like" />
+            </p>
+            <p> 出生年月：
+                <select>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                </select>年
+                <select>
+                    <option>1</option>
+                    <option>2/option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                </select>月
+            </p>
+            <p>
+                个人简介: <textarea cols="50"></textarea>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

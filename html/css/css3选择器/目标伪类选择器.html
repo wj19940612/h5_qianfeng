@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        目标伪类选择器
+    </title>
+    <style type="text/css">
+    /*突出选中的锚*/
+        :target{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#text1">实例文字1</a>|
+    <a href="#text2">实例文字2</a>
+
+    <div id="text1" >
+        <h1>实例文字1</h1>
+        <p>此处放内容...</p>
+    </div>
+
+    <div id="text2">
+        <h1>实例文字2</h1>
+        <p>此处放内容...</p>
+    </div>
+</body>
+
+</html>

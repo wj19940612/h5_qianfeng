@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+
+            兔子繁殖问题 假设一对新生兔子 ，从第四个月开始他们每个月月初都会生一对兔子
+            新生的兔子从第四个月开始又会生一对兔子 
+            一月兔     二月兔      三月兔      成熟兔
+        1   1           0           0           0       1    
+        2   0           1           0           0       1 
+        3   0           0           1           0       1
+        4   1           0           0           1       2
+        5   1           1           0           1       3
+        6   1           1           1           1       4
+        7   2           1           1           2       6
+        8   3           2           1           3       9
+        9   4           3           2           4       13  
+        10  6           4           3           6       19
+        */
+
+        // rabbit(4)=rabbit(1)+rabbit(3);
+        function rabbit(month) {
+            if (month < 4) {
+                return 1;
+            }
+
+            return rabbit(month - 3) + rabbit(month - 1);
+        }
+
+        var rabbitNumber=rabbit(10);
+        alert(rabbitNumber);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

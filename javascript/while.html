@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /*
+            实例:
+            1 打印100以内 7的倍数
+            2 打印100以内的奇数
+            3 打印100以内所有的偶数和
+            4 打印图形
+            * * * * * * * * * *
+            * * * * * * * * * *
+        */
+
+        var i = 1;
+
+        // while (i <= 100) {
+        //     if (i % 7 == 0) {
+        //         document.write(i + " <br/> ");
+        //     }
+        //     i++;
+        // }
+
+        // while (i <= 100) {
+        //     if (i % 2 != 0) {
+        //         document.write(i + "<br/>");
+        //     }
+        //     i++;
+        // }
+
+        // var result = 0;
+        // while (i <= 100) {
+        //     if (i % 2 == 0) {
+        //         result += i;
+        //     }
+
+        //     i++;
+        // }
+
+        // document.write(result);
+
+        // var a = 0;
+
+        // while (a < 40) {
+        //     if (a % 10 == 0) {
+        //         document.write("<br/>");
+        //     }
+        //     document.write("*");
+
+        //     ++a;
+        // }
+
+        // for (let i = 1; i < 6; i++) {
+
+        //     for (let j = 0; j < i; j++) {
+        //         document.write("* &nbsp");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+
+        for (var i = 0; i < 5; i++) {
+
+            for (var k = 0; k < 5 - i-1 ; k++) {
+                document.write("&ensp;&ensp;");
+            }
+
+            for (var j = 0; j <= i; j++) {
+                document.write("* &nbsp");
+            }
+            document.write("<br/>");
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

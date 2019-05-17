@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        弹性盒子
+    </title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .left {
+            width: 100px;
+            background: #f00;
+
+        }
+
+        .center {
+            background: #0f0;
+            /*超出部分自动裁剪*/
+            flex: 1;
+
+        }
+
+        .right {
+            width: 100px;
+            background: #00f;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+</body>
+
+</html>

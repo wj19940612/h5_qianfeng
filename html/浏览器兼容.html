@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        浏览器兼容
+    </title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*如果父容器没有定义高度 依靠图片撑起高度 那么会在底部留有3个像素的边
+          因为img 是行内元素  解决犯法是display:block */
+
+        .box1 {
+            width: 500px;
+            background: green;
+
+        }
+
+        img {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <img src="image/timg.jpg" />
+    </div>
+
+</body>
+
+</html>

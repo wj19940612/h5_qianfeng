@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            判断一个年份是否是闰年
+        */
+
+        function leapYear(year) {
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                return true;
+            }
+            return false;
+        }
+
+        alert(leapYear(2020));
+
+        /*
+            素数  只能被1 和他自身整除的数
+        */
+
+        function primeNumber(number) {
+            for (var i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+                document.write(i + " <br/>");
+            }
+            return true;
+        }
+
+        var result = primeNumber(9);
+        alert(result);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

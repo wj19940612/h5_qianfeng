@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        属性选择器
+    </title>
+    <style type="text/css">
+        .img2 {
+            border: 5px solid red;
+        }
+
+        /*不用写class 直接指定对应属性*/
+        img[title] {
+            border: 5px solid red;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            height: 50px;
+            border: 2px dashed greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image/timg.jpg" title="图片" />
+    <img src="image/timg.jpg" class="img2" />
+    <div>
+        <input type="text" />
+    </div>
+
+</body>
+
+</html>

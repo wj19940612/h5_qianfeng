@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<!--:nth-chid(&n+P) 与:nth-last-chid(&n+P) 循环样式
+  &表示每次循环中包含几种样式 P表示指定的样式在循环中所处的位置-->
+<head>
+    <meta charset="utf-8">
+    <title>
+        结构伪类选择器
+    </title>
+    <style type="text/css">
+       .nav1 li:nth-child(7n+1){
+           background: red;
+       }
+       .nav1 li:nth-child(7n+2){
+           background: #f90;
+       }
+       .nav1 li:nth-child(7n+3){
+           background: #ff0;
+       }
+       .nav1 li:nth-child(7n+4){
+           background: green;
+       }
+       .nav1 li:nth-child(7n+5){
+           background: #0ff;
+       }
+       .nav1 li:nth-child(7n+6){
+           background: blue;
+       }
+       .nav1 li:nth-child(7n+7){
+           background: #609;
+       }
+    
+    </style>
+</head>
+
+<body>
+    <h1>列表A</h1>
+    <ul class="nav1">
+        <li>列表项目1</li>
+        <li>列表项目2</li>
+        <li>列表项目3</li>
+        <li>列表项目4</li>
+        <li>列表项目5</li>
+        <li>列表项目6</li>
+        <li>列表项目7</li>
+        <li>列表项目8</li>
+        <li>列表项目9</li>
+        <li>列表项目10</li>
+
+
+        <li>列表项目1</li>
+        <li>列表项目2</li>
+        <li>列表项目3</li>
+        <li>列表项目4</li>
+        <li>列表项目5</li>
+        <li>列表项目6</li>
+        <li>列表项目7</li>
+        <li>列表项目8</li>
+        <li>列表项目9</li>
+        <li>列表项目10</li>
+
+    </ul>
+
+    <!-- <ul class="nav2">
+        <li>列表项目1</li>
+        <li>列表项目2</li>
+        <li>列表项目3</li>
+        <li>列表项目4</li>
+        <li>列表项目5</li>
+        <li>列表项目6</li>
+        <li>列表项目7</li>
+        <li>列表项目8</li>
+        <li>列表项目9</li>
+        <li>列表项目10</li>
+
+    </ul> -->
+
+</body>
+
+</html>

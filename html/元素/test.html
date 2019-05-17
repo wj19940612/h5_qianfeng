@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<!--inline 会把块元素变为行元素-->
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        display实例
+    </title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav {
+            background: black;
+            height: 60px;
+            
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .nav ul {
+            width: 960px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .nav ul li{
+            float: left; 
+            width: 119px;
+            border-right: 1px solid white;
+        }
+
+        .nav ul li a{
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .nav ul li a:hover{
+            background: red;
+        }
+
+        #last{
+            border-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="ul">
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li> <a href="#">新闻联播</a></li>
+            <li id="last"> <a href="#">新闻联播</a></li>
+        </ul>
+    </div>
+</body>
+
+
+
+</html>

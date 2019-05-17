@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!-- nth-of_type 先选择类 适合子元素很复杂的情况下-->
+<head>
+    <meta charset="utf-8">
+    <title>
+        结构伪类选择器 nth-of-type 
+    </title>
+    <style type="text/css">
+        /*正数奇数个*/
+        .nav1 li:nth-of-type(odd) {
+            background: #0f0;
+        }
+
+        /*正数偶数个*/
+        .nav1 li:nth-of-type(even) {
+            background: #0ff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>列表A</h1>
+    <ul class="nav1">
+        <li>列表项目1</li>
+        <h3>列表项目</h3>
+        <h3>列表项目</h3>
+        <li>列表项目2</li>
+        <h3>列表项目</h3>
+        <li>列表项目3</li>
+        <h3>列表项目</h3>
+        <li>列表项目4</li>
+        <h3>列表项目</h3>
+        <li>列表项目5</li>
+        <h3>列表项目</h3>
+        <li>列表项目6</li>
+        <h3>列表项目</h3>
+        <li>列表项目7</li>
+        <h3>列表项目</h3>
+        <li>列表项目8</li>
+        <h3>列表项目</h3>
+        <li>列表项目9</li>
+        <h3>列表项目</h3>
+        <li>列表项目10</li>
+
+    </ul>
+
+    <ul class="nav2">
+        <li>列表项目1</li>
+        <li>列表项目2</li>
+        <li>列表项目3</li>
+        <li>列表项目4</li>
+        <li>列表项目5</li>
+        <li>列表项目6</li>
+        <li>列表项目7</li>
+        <li>列表项目8</li>
+        <li>列表项目9</li>
+        <li>列表项目10</li>
+
+    </ul>
+
+</body>
+
+</html>

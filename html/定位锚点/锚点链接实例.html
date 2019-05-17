@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        锚点链接
+
+    </title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        img {
+            display: block;
+
+            width: 500px;
+            height: 375px;
+        }
+
+        .box {
+            width: 500px;
+            height: 375px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .btn {
+            position: absolute;
+            right: 5px;
+            bottom: 10px;
+        }
+
+        .btn a {
+            width: 30px;
+            height: 30px;
+            background: rgba(0, 0, 0, .5);
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            margin-right: 20px;
+            
+
+        }
+
+        .list{
+            width: 500px;
+            height: 375px;
+            overflow: hidden;
+        }
+
+        .btn a:hover {
+            background: rgba(0, 0, 0, 1);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="btn">
+            <a href="#image1">1</a>
+            <a href="#image2">2</a>
+            <a href="#image3">3</a>
+            <a href="#image4">4</a>
+        </div>
+
+        <div class="list">
+            <img src="image/test3.jpg" id="image1" />
+            <img src="image/test4.jpg" id="image2"/>
+            <img src="image/test5.jpg" id="image3"/>
+            <img src="image/test6.jpg" id="image4"/>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

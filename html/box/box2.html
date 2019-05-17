@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--float 属性会造成height未设置的情况下 height=0 ,高度塌陷  可以设置overflow处理-->
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        盒模型1
+    </title>
+    <style type="text/css">
+        .box {
+            width: 960px;
+            background: #eee;
+            border: black 5px solid;
+            overflow: hidden;
+        }
+
+        .box_l {
+            width: 400px;
+            height: 180px;
+            background: #f00;
+            float: left;
+            padding: 20px;
+            border: yellow 10px solid;
+        }
+
+        .box_c,
+        .box_r {
+            width: 200px;
+            height: 200px;
+            float: left;
+            padding: 20px;
+        }
+
+        .box_c {
+            background: #f1f1f1
+        }
+
+        .box_r {
+            background: #fbfbfb;
+            background-image: url(image/timg.jpg);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="box_l">
+            接受《环球时报》采访的中国专家表示，这些舰艇的第一个特点就是盾舰云集有看点。所谓盾舰，就是装备了多用途相控阵雷达的驱逐舰、护卫舰，通常称为神盾舰，因为美国的“宙斯盾”系统而得名。此次参加阅兵的舰艇中，中国海军的多款新型驱逐舰都使用了
+        </div>
+        <div class="box_c">
+            接受《环球时报》采访的中国专家表示，这些舰艇的第一个特点就是盾舰云集有看点。所谓盾舰，就是装备了多用途相控阵雷达的驱逐舰、护卫舰，通常称为神盾舰，因为美国的“宙斯盾”系统而得名。此次参加阅兵的舰艇中，中国海军的多款新型驱逐舰都使用了
+        </div>
+        <div class="box_r">
+            接受《环球时报》采访的中国专家表示，这些舰艇的第一个特点就是盾舰云集有看点。所谓盾舰，就是装备了多用途相控阵雷达的驱逐舰、护卫舰，通常称为神盾舰，因为美国的“宙斯盾”系统而得名。此次参加阅兵的舰艇中，中国海军的多款新型驱逐舰都使用了
+        </div>
+    </div>
+
+</body>
+
+</html>

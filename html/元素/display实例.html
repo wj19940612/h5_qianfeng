@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<!--inline 会把块元素变为行元素-->
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        display实例
+    </title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none
+        }
+
+        .nav {
+            height: 60px;
+            background: #000;
+        }
+
+        .nav ul {
+            width: 960px;
+
+            /*块元素居中*/
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .nav ul li {
+            float: left;
+            border-right: 1px solid white;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            /*均分宽度*/
+            width: 119px;
+            /**/
+            display: block;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .nav ul li a:hover {
+            background: red;
+        }
+
+        #last{
+            border-right: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">集团介绍</a></li>
+            <li><a href="#">集团介绍</a></li>
+            <li>
+                <a href="#">集团介绍</a>
+            </li>
+            <li>
+                <a href="#">集团介绍</a>
+            </li>
+            <li>
+                <a href="#">集团介绍</a>
+            </li>
+            <li>
+                <a href="#">集团介绍</a>
+            </li>
+            <li>
+                <a href="#">集团介绍</a>
+            </li>
+            <li id="last">
+                <a href="#">集团介绍</a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+
+
+</html>
