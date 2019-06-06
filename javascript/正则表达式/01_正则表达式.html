@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        //1 字面量方式
+        var reg = /abc/;
+
+        //2  构造函数
+        var reg = new RegExp("abc");
+
+        //test 方法 正则表达式的方法 用来检测正则字符串中是否含有符合规则的子串  有返回true  
+
+        var str = "abc";
+
+        var flag = reg.test(str);
+
+        console.log(flag);
+
+        // 修饰符 g i
+        // g 表示全局匹配
+
+        var reg = /abc/g;
+        var str = "abcabc";
+
+        //match 字符串方法
+        console.log(str.match(reg)); //["abc", "abc"]
+
+        // i 忽略大小写
+        var reg = /abc/ig;
+        var str = "AbcAbcAbc";
+        console.log(str.match(reg)); // ["Abc", "Abc", "Abc"]
+
+        // search 用于查找符合规则的子串的位置 只返回第一个匹配的位置
+        var reg = /abc/;
+        var str = "1234567abc";
+        console.log(str.search(reg)); //7
+
+        // split
+        var reg = /good/;
+        var str = "good good study!";
+        console.log(str.split(reg));//["", " ", " study!"]
+
+        // replace
+        var reg = /tmd/i;
+        var str = "abc tmd abc TMD";
+        console.log(str.replace(reg, "*")); //abc * abc TMD
+
+        // exec方法  正则表达式的方法  将匹配成功的内容放到数组里，如果没有匹配成功 则返回null
+        var reg = /good/g;
+        var str = "good good study";
+        console.log(reg.exec(str)); //["good", index: 0, input: "good good study", groups: undefined]
+        console.log(reg.exec(str)); //["good", index: 0, input: "good good study", groups: undefined]
+        console.log(reg.exec(str)); //null
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

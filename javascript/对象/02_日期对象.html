@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /*
+            Date
+        */
+
+        // alert(date); //Thu May 23 2019 16:49:03 GMT+0800 (中国标准时间)
+
+        // alert(date.toDateString());
+
+        function showDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+
+            var week = date.getDay();
+            if (week == 0) {
+                week = "日";
+            }
+            var hour = date.getHours();
+
+            var mill = date.getMinutes();
+
+            var second = date.getSeconds();
+
+            return year + "年" + month + "月" + day + "日" + "  星期" + week + " " + hour + "时" + mill + "分" + second + "秒";
+        }
+
+        // alert(showDate());
+
+        function getLastDate(n) {
+            var date = new Date();
+            var time = date.getDate();
+            date.setDate(time + n);
+            return date;
+        }
+
+        alert(getLastDate(-3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

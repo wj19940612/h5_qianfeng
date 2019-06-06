@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            innerHtml 标签中的所有内容
+        */
+
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var div = document.getElementById("div1");
+
+            btn.onclick = function () {
+                div.innerHTML="<h1>这是修改的字体</h1>";
+                // alert(div.innerHTML);
+            }
+
+            // alert();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <em>
+            斜体
+        </em>
+    </div>
+
+    <input type="button" id="btn" value="按钮" />
+</body>
+
+</html>

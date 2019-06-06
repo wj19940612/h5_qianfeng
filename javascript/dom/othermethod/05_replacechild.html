@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /*
+            replaceChild()
+            parent.replacechild(newNode,oldNode);
+
+            cloneNode
+            参数：默认false 如果传true 就会赋值innerHTML属性
+        */
+
+        window.onload = function () {
+            // var div = document.getElementById("div");
+            // var node = document.createElement("strong");
+            // div.parentNode.replaceChild(node,div);
+
+            var div = document.getElementById("div");
+            var span = document.getElementsByTagName("span")[0];
+            var node=div.cloneNode(true);
+         
+            span.parentNode.insertBefore(node,span);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <span>span</span>
+    <div id="div">div</div>
+    <p>p</p>
+</body>
+
+</html>

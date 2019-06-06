@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            indexof
+            获取元素的索引
+        */
+
+        // var arr = [10, 20, 30];
+        // alert(arr.indexOf(20));
+
+        /*
+            forEach(function(item,index,array))
+        */
+
+        // var arr = [10, 20, 30];
+        // arr.forEach(function (item, index, array) {
+        //     alert(" " + item + " " + index + " :" + array);
+        // })
+
+        /*
+        map(function(item,index,array))
+
+        */
+        // var arr = [10, 20, 30];
+        // var newArr = arr.map(function (item, index, array) {
+        //     return item + 2;
+        // })
+
+        // alert(newArr); // 12,22,32
+
+        /*
+            reduce 归并
+        */
+
+        // var arr = [10, 20, 30, 40, 50];
+        // var newArr = arr.reduce(function (pre, next, index, array) {
+        //     /*
+        //         pre 上一次遍历return后面的值
+        //         next 当前遍历到的元素
+        //     */
+        //     alert(pre + " " + next);
+        //     return pre + next;
+        // })
+
+        // alert(newArr); //150
+
+        /*
+            filter
+        */
+
+        // var arr = [10, 20, 30, 40, 50];
+        // var res = arr.filter(function (item, index, array) {
+        //     return item > 30;
+        // })
+        // alert(res);
+
+        /*
+            some
+            判断return后面的条件是否成立，如果成立返回true 不成立返回false
+            如果匹配成功 返回true  结束循环
+        */
+        // var arr = [10, 20, 30, 40, 50];
+        // var res = arr.some((item, index, array) => {
+        //     return item == 30;
+        // })
+        // alert(res);
+
+        /*
+            every 跟some 一样 但是要求每一项目都符合，有一样不符合，就返回false
+        */
+
+        var arr = [10, 20, 30, 40, 50];
+        var res = arr.every((item, index, array) => {
+            return item > 0;
+        })
+        alert(res);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

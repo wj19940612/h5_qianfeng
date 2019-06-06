@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            document.getElementsByClassName()
+            功能：获取node节点下，所有符合天剑的元素节点
+            参数：calss
+            返回值：所有符合条件的元素节点
+
+            【注】 getElementsByClassName 在ie浏览器低版本下不兼容
+
+        */
+        window.onload = function () {
+            // var nodes=document.getElementsByClassName("box");
+            // alert(nodes.length);
+
+            var ul1 = document.getElementById("ul1");
+            // var nodes = ul1.getElementsByClassName("box");
+            var nodes=elementsByClassName(ul1,"box");
+
+            for (var i = 0; i < nodes.length; i++) {
+                alert(nodes[i].innerHTML);
+            }
+        }
+
+        /*
+            封装函数，封装一个兼容的方法
+        */
+
+        function elementsByClassName(parent, classStr) {
+            //找到parent下所有的元素节点
+            var nodes = parent.getElementsByTagName('*');
+            var result = [];
+            for(var i=0;i<nodes.length;i++){
+                //如果符合条件 则装入数组中
+                if(nodes[i].className==classStr){
+                    result.push(nodes[i]);
+                }
+            }
+            return result;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <ul id="ul1">
+        <li class="box">111111</li>
+        <li>222222</li>
+        <li class="box">333333</li>
+        <li>444444</li>
+    </ul>
+    <ol>
+        <li class="box">555555</li>
+        <li>666666</li>
+        <li class="box">777777</li>
+        <li>888888</li>
+
+    </ol>
+
+</body>
+
+</html>

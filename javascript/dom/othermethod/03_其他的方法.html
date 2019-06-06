@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            createElement()
+            【格式】 document.createElement(标签名)
+
+            appendChild()
+            【格式】parent.appendChild(newNode);
+            功能：将newNode插入到parent子节点的末尾
+
+            createTextNode()
+            【格式】 document.createTextNode()
+            
+
+        */
+        window.onload = function () {
+
+            var btn = document.getElementById("btn");
+            var div = document.getElementById("div");
+            ;
+            btn.onclick = function () {
+
+                // //1 创建span节点
+                // var node = document.createElement("span"); //创建元素节点
+                // //2 给span文本添加文字
+                // var text = document.createTextNode("溺水的鱼");
+                // //3 将文本插入到节点中
+                // node.appendChild(text);
+                var node = createElementWithTextNode("span", "溺水的鱼");
+                div.appendChild(node);
+
+
+            }
+
+            /*
+             创建一个带有文字的节点
+            */
+            function createElementWithTextNode(targetName, text) {
+                var node = document.createElement(targetName);
+                var text = document.createTextNode(text);
+                node.appendChild(text);
+                return node;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="div"><em id="em">斜体</em></div>
+    <button id="btn">按钮</button>
+</body>
+
+</html>

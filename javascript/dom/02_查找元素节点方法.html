@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        /*
+            document.getElementById(id)
+            【功能】 通过元素节点的id.获取当前节点
+        */
+
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+            //   alert(oDiv.id);
+            //   alert(oDiv.innerHTML);
+            //   alert(oDiv.className);
+            //   alert(oDiv.style);  //style 对象
+            //   alert(oDiv.style.width);
+            //   oDiv.style.width="500px";
+
+            /*
+                在style样式中
+                background-color使用-链接的属性
+                访问的时候，需要去掉-,然后将后续单词的首字母大写
+            
+            */
+
+            oDiv.style.background = "yellow";
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="div1" title="hello" class="box" style="width:300px;height: 200px;background: red"></div>
+</body>
+
+</html>

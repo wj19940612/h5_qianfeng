@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            set/getAttribute
+            removeAttribute
+            【注】 都是操作当前元素节点中的某个属性。
+        */
+
+        window.onload = function () {
+            var div = document.getElementById("div1");
+            // alert(div.title);
+            // alert(div.className);
+
+            // alert(div.getAttribute("title"));
+            // div.setAttribute("title","hahahahah");
+
+            /*
+                上述两种方式的区别
+                《1》 class 范围区别  点操作是通过className 而setAttribute/getAttribute是通过class
+                <2>  set/getAttribute 对用户自定义支持比较好
+                <3>  set/getAttribute 可以将属性完全删除 
+                
+                alert(div.getAttribute("class"));
+                div.setAttribute("class","yyy");
+            */
+
+            // div.removeAttribute("title");
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="div1" title="hello" name="world" class="box"> </div>
+</body>
+
+</html>

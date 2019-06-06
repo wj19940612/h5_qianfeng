@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            charCodeAt
+            【格式】 
+            返回值：返回字符串对应下标字符的ASCII值
+        */
+
+        var str = "hello";
+        // alert(str.charCodeAt(1));
+
+        /*
+            concat 拼接
+
+        */
+        //    var str2="world";
+
+        //    var str3=str.concat(str2);
+
+        //    alert(str3);
+
+        /*
+            search(子串/正则) 参数可以是正则表达式
+            "abc"  /abc/ig
+            【注】 正则表达式可以添加修饰符，i代表忽略大小写，g代表全局匹配
+        */
+
+        // var str="Abcabcabc";
+
+        // alert(str.search(/abc/i));
+
+        /*
+            replace
+        */
+
+        var str = "how are are you";
+    
+        var newStr = str.replace(/are/ig, "old are");
+
+        alert(newStr);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组的方法</title>
+
+    <script type="text/javascript">
+        /*
+            concat()
+            【格式】
+            功能：将两个数组合并成新数组，原始2个数组不会变化
+        */
+
+        // var arr1 = ["钢铁侠", '绿巨人'];
+        // var arr2 = ["美国队长", "鹰眼"];
+        // var arr = arr1.concat(arr2);
+        // alert(arr);
+        // alert(arr1);
+        // alert(arr2);
+
+        /*
+        * slice()
+          【】数组.slice(start,end);
+          功能：基于当前数组获取指定区域元素并创建新的元素 原始数组不变 
+          参数： 不包含end索引的数据
+        */
+
+        // var arr=["钢铁侠","超人","绿巨人","x战警"];
+        // var newArr=arr.slice(1,3);
+        // alert(newArr);
+        // alert(arr);
+
+        /*
+            splice 可以完成删除 插入 替换功能
+            【】数组.splice(start,length,元素...);
+            会对原数组进行修改
+             
+        */
+
+        // var arr = ["red", "blue", "green",];
+        // //删除功能
+        // var res=arr.splice(1,1);
+        // alert(res);
+        // alert(arr);
+
+        //插入功能
+        // var res = arr.splice(1, 0, "yellow");
+        // alert(res);
+        // alert(arr);
+
+        //替换
+        // var res = arr.splice(1, 1, "yellow");
+        // alert(res);
+        // alert(arr);
+
+        /*
+            join()
+            【】数组.join()
+            功能：使用拼接符将数组中的元素拼接成字符串
+        */
+        var arr = [10, 20, 30];
+        var res=arr.join("-");
+        alert(arr);
+        alert(res);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

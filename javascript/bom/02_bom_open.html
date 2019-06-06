@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /*
+            window.open();
+            参数意义：
+                1 要加载的url
+                2 窗口的名称或者窗口的目标
+                3 一串具有特殊意义的字符串
+        */
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                //如果只有一个参数 调用open方法会打开新的窗口 
+                open("https://www.baidu.com","baidu","width=200,height=200,top=200,left=200");
+              
+            }
+        }
+
+    </script>
+
+    <style type="text/css">
+        #btn{
+            width: 200px;
+            height: 200px;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn"  />
+</body>
+
+</html>

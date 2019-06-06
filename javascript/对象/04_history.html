@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /*
+            history
+
+            属性 length 用户打开页面数
+
+            方法：
+                back();  返回上一条历史记录 类似于后退
+                forward()前进道下一条历史记录，类似于前进
+                go();
+                    0 代表重载当前页面
+                    正数 前进对应数量的记录
+                    负数 后退对应数量的记录
+        */
+
+        window.onload = function () {
+
+            $("btn").onclick = function () {
+                alert(history.length);
+            }
+
+            $("forward").onclick = function () {
+                history.forward();
+            }
+
+            $("back").onclick = function () {
+                history.back();
+            }
+
+            $("go").onclick = function () {
+                history.go(4);
+            }
+        }
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="记录" id="btn" />
+    <input type="button" value="前进" id="forward" />
+    <input type="button" value="后退" id="back" />
+    <input type="button" value="go" id="go" />
+</body>
+
+</html>

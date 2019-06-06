@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var outer = document.getElementById("outer");
+            var inner = document.getElementById("inner");
+
+
+            // outer.onclick=foo;
+            // outer.onclick=bar;
+            // outer.onclick=null;
+
+            // outer.addEventListener("click", foo, false);
+            // outer.addEventListener("click", bar, false);
+            // outer.removeEventListener("click", foo);
+           
+
+            function foo() {
+                console.log("outer1");
+            }
+
+            function bar() {
+                console.log("outer2");
+            }
+
+
+            function addEvent(obj, type, fun) {
+                if (obj.addEventListener) {
+                    obj.addEventListener(type, fun, false);
+                } else {
+                    obj.attachEvent("on" + type, fun);
+                }
+            }
+
+            function removeEvent(obj, type, fun) {
+                if (obj.removeEventListener) {
+                    obj.removeEventListener(type, fun, false);
+                } else {
+                    obj.detachEvent("on" + type, fun);
+                }
+            }
+
+            addEvent(outer,"click",foo);
+        }
+    </script>
+
+    <style type="text/css">
+        #outer {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        #inner {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+</body>
+
+</html>

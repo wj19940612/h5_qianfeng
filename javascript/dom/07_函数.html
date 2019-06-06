@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /*
+            id        document.getElementById()
+            tagName   document.getElementsByTagName()
+            name      document.getElementsByName()  
+            className document.getElementsByClassName()
+        */
+        /*
+            通过封装函数 简述上述的操作
+                css选择器
+        
+        */
+
+        function $(vArg) {
+            switch (vArg[0]) {
+                case "#":
+                    return document.getElementById(vArg.substring(1));
+                    break;
+                case "."://className
+
+                    return elementsByClassName(document, vArg.substring(1));
+                default:
+                    //对参数的前五个字符进行判断
+                    var str = vArg.substring(0, 5);
+                    if (str == "name=") {
+                        return document.getElementsByName(vArg.substring(5));
+                    } else {
+                        return document.getElementsByTagName(vArg);
+                    }
+
+                    break;
+            }
+        }
+
+
+
+        function elementsByClassName(parent, classStr) {
+            //找到parent下所有的元素节点
+            var nodes = parent.getElementsByTagName('*');
+            var result = [];
+            for (var i = 0; i < nodes.length; i++) {
+                //如果符合条件 则装入数组中
+                if (nodes[i].className == classStr) {
+                    result.push(nodes[i]);
+                }
+            }
+            return result;
+        }
+
+        window.onload = function () {
+            //id
+            // alert($("#div").innerHTML);
+
+            //className
+            // alert($(".box").length);
+            // alert($(".box")[1].innerHTML);
+
+            //targtName
+            // alert($("div").length);
+
+            //name
+            alert($("name=hello").length);
+            alert($("name=hello")[0].innerHTML);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="div">1111111</div>
+    <div class="box">2222222</div>
+    <div class="box">3333333</div>
+    <div name="hello">4444444</div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            width: 300px;
+            height: 400px;
+            background: gray;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #count {
+            width: 200px;
+            height: 150px;
+            margin: auto;
+            font-size: 40px;
+            line-height: 150px;
+        }
+
+        #div1 input {
+            margin: 0 auto;
+            width: 150px;
+            height: 40px;
+            background: yellow;
+            margin-top: 20px;
+            font-size: 25px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function $(id){
+           return document.getElementById(id);
+        }
+
+        var count=3610;
+        window.onload=function(){
+     
+            var timer=null;
+            $("start").onclick=function(){
+                timer=setInterval(function(){
+                    count++;
+                    formatTime();
+                },100);
+            }
+
+            $("pause").onclick=function(){
+                clearInterval(timer);
+            }
+
+            $("stop").onclick=function(){
+                clearInterval(timer);
+                count=0;
+                formatTime();
+            }
+        }
+
+        function formatTime(){
+            $("second").innerHTML=format(count%60);
+            $("mill").innerHTML=format(parseInt((count/60)%60))+":";
+            $("hour").innerHTML=format(parseInt(count/3600))+":";
+        }
+
+        function format(time){
+            if(time<10){
+                return "0"+time;
+            }
+            return time;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="div1">
+
+        <div id="count">
+            <span id="hour">
+                00:
+            </span>
+            <span id="mill">
+                00:
+            </span>
+            <span id="second">
+                00
+            </span>
+
+        </div>
+
+        <input id="start" value="开始" type="button" />
+        <input id="pause" value="暂停" type="button" />
+        <input id="stop" value="结束" type="button" />
+
+    </div>
+</body>
+
+</html>

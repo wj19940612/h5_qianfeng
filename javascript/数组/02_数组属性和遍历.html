@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组属性和遍历</title>
+    <script type="text/javascript">
+
+        /*
+
+            数组的长度
+            arr.length 访问  数组元素的个数
+            【注】 length 属性 是可读可写的
+        */
+
+        // var arr=['red',"green","blue"];
+        // // alert(arr.length);
+        // arr.length=2;
+
+        // alert(arr.length);
+
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        /*
+            数组元素的访问和赋值都是通过数组的下标来进行的
+            【注】 下标就是索引  从0开始
+        
+        */
+
+        // var arr = [10, 20, 30, 40, 50];
+        // alert(arr[1+2]);
+
+        // var array = [];
+        // for (var i = 0; i < 10; i++) {
+        //     array[i] = i * i;
+        // }
+        // alert(array);
+
+        // var array = [];
+        // for (var i = 0; i < 10; i++) {
+        //     array[i] = Math.random();
+        // }
+        // alert(array);
+
+
+        var arr = ['red', "green", "blue"];
+        // for (var i = 0; i < arr.length; i++) {
+        //     document.write(arr[i]+"<br/>");
+        // }
+            for (const key in arr) {
+                document.write(arr[key]+"<br/>");
+            }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        ul li {
+            background: red;
+            margin: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var ul = document.getElementsByTagName("ul")[0];
+            var liList = document.getElementsByTagName("li");
+            // for (var i = 0; i < liList.length; i++) {
+            //     liList[i].onclick = function () {
+            //         console.log(this.innerHTML);
+            //     }
+            // }
+
+
+            //事件委托
+            ul.onclick = function (e) {
+                var evt = e || event;
+                var _target = evt.target || evt.srcElement;
+                if (_target.nodeName.toUpperCase() == "LI") {
+                    console.log(_target.innerHTML);
+                }
+            }
+
+            for (let index = 0; index < 5; index++) {
+                var li = document.createElement("li");
+                li.innerHTML = index + 5;
+                ul.appendChild(li);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

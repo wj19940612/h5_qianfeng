@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        //. 除了换行符以外所有的单个字符
+        var reg = /g..gle/gi;
+        var str = "googleg--gle";
+        console.log(reg.test(str));  //true  .. 替换成了 --
+        console.log(str.match(reg)); // ["google", "g--gle"]
+
+        // * 重复多次匹配 匹配任意次（0-n次）
+        var reg=/g*gle/gi;
+        var str="gle";
+        console.log(reg.test(str),str.match(reg)); //true ["gle"]
+
+        // + 至少有一次重复
+        var reg=/g+gle/gi;
+        // var str="gle";              //false
+        var str="ggle";                // true
+        console.log(reg.test(str)); 
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function setCookie(name, value, day) {
+            var date = new Date();
+            date.setDate(date.getDate + day);
+            document.cookie = name + "=" + value + ";expires=" + date;
+            console.log("cookie: " + document.cookie);
+        }
+
+        setCookie("name1", "honny1", 1);
+        setCookie("name2", "honny2", 1);
+
+
+        console.log("cookie: " + document.cookie);
+
+        function getCookie(name) {
+            var str = document.cookie;
+            console.log("cookie: " + str);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

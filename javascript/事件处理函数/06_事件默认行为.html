@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var link = document.getElementsByTagName("a")[0];
+            var form = document.getElementsByTagName("form")[0];
+            var input = document.getElementsByTagName("input");
+            link.onclick = function (e) {
+                var evt = e || event;
+                console.log("aaaa");
+                return false;
+            }
+
+            form.onsubmit=function(){
+                console.log("提交");
+                return false;
+            }
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <a href="https://www.baidu.com/">aaa</a>
+
+    <form>
+        <input type="text">
+        <input type="submit" value="提交" placeholder="提交">
+    </form>
+</body>
+
+</html>
