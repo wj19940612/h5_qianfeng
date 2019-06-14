@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var userName = document.getElementById("userName");
+            userName.onchange = function () {
+                var val = this.value;
+                /*
+                  /^[a-zA-Z_]  开头以a-z A-Z _组成
+                  \w{5,14}  5到14位的 数字字母下划线
+                  $ 必须有
+                */
+                var reg = /^[a-zA-Z_]\w{5,14}$/;
+
+                if (reg.test(val)) {
+                    console.log("格式正确");
+                } else {
+                    console.log("格式错误");
+                }
+
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    用户名：<input type="text" id="userName">(数字、字母、下划线组成的6-15位字符，且不能以数字开头)
+
+</body>
+
+</html>

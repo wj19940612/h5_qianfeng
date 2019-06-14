@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>毁掉地狱</title>
+</head>
+
+<body>
+    <script>
+        // x = getData();
+        // y = getMoreData(x);
+        // z = getMoreData(y);
+
+        // //回调地狱
+        // getData(function (x) {
+        //     getMoreData(x, function (y) {
+        //         getMoreData(y, function (z) {
+
+        //         })
+
+        //     })
+        // })
+
+        //通过promise 这个构造函数 来创建一个对象
+        // 这个promise对象，它有3个状态:pending fullfill reject状态
+        // promise构造函数 有一个参数  这个参数是一个回调 这个回调，接受2个参数 这两个参数 都能狗改变
+        // promise 对象的状态 第一个参数，可以将状态从pending==>fullfill  而第二个参数可以将状态从fullfill==>reject
+
+        // var promise = new Promise((resolve, reject) => {
+        //     if (成功) {
+        //         resolve()
+        //     } else {
+        //         reject();
+        //     }
+        // })
+
+        var promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                var num = Math.floor(Math.random() * 100);
+                if (num % 2 === 0) {
+                    resolve(num);
+                } else {
+                    reject(num);
+                }
+            }, 1000)
+        });
+
+        promise.then(num => {
+            console.log('resolve :' + num);
+        }).catch(num => {
+            console.log('reject :' + num);
+        })
+    </script>
+</body>
+
+</html>

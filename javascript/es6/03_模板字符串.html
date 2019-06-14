@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script type="text/javascript">
+        // es5
+        // var obj={"name":"john","age":20};
+        // var name=obj.name;
+        // var age=obj.age;
+        // console.log(name+"的年龄是："+age); //john的年龄是：20
+
+        //es6
+        // let obj={"name":"john","age":20};
+        // let {name,age}=obj;
+        // console.log(`${name}的年龄是${age}`); //john的年龄是20
+        // console.log(`${name}`);    //john
+
+
+        var arr = [0, 1, 2, 3, 4, 5];
+        window.onload = function () {
+            var ul = document.getElementById("test");
+            var html = "";
+            //es5
+            // for (var i in arr) {
+            //     html += "<li>" + arr[i] + "</li>";
+            // }
+
+            for(let i in arr){
+                html+=`<li>
+                <a href="">${arr[i]}</a>
+                </li>`;
+            }
+            ul.innerHTML=html;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <ul id="test">jajj</ul>
+
+</body>
+
+</html>

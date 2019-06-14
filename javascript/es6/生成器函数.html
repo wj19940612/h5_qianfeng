@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成器函数</title>
+
+    <script type="text/javascript">
+        /*   function* foo(x) {
+               yield x + 1;
+               yield x + 2;
+               return x + 3;
+           }
+   
+           var f = foo(1);
+           console.log(f); //foo {<suspended>}
+           console.log(f.next(),f.next(),f.next()); //{value: 2, done: false} {value: 3, done: false} {value: 4, done: true}
+           */
+
+        function* foo(x) {
+            var y = 2 * (yield (x + 1));
+            var z = yield (y / 3);
+            return (x + y + z);
+        }
+
+        var it = foo(5);
+        console.log(it);
+
+        // console.log(it.next(3)); //{value: 6, done: false}
+        // console.log(it.next(3));// {value: 2, done: false}
+        // console.log(it.next(3)); //{value: 14, done: true}
+
+        //斐波那契数列
+
+        function* feiBo(n) {
+            let a = 0;
+            let b = 1;
+            for (let i = 0; i < n; i++) {
+                yield a;
+                let temp = a + b;
+                a = b;
+                b = temp;
+            }
+        }
+
+        var f=feiBo(10);
+        for(let a of f){
+            console.log(a);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

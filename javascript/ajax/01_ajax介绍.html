@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax的核心对象：XMLHttpRequest</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <script>
+        //1 创建ajax对象
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            //当xhr对象的eadyStatu属性发生改变
+            //readyStatu
+            // 0 xhr 对象创建  但没有初始化
+            // 1 xhr 对象调用了open
+            // 2 xhr 已经发出ajax请求
+            // 3 已经返回了部分数据
+            // 4 数据已经全部返回
+
+            if (xhr.readyState !== 4) {
+                return;
+            }
+            if (xhr.status >= 200 && xhr.status <= 300) {
+                document.querySelector("h1").innerHTML=xhr.responseText;
+            }else{
+                console.error("请求失败");
+            }
+
+        }
+        //2 打开这个对象
+        // xhr.open("get", 
+        // 'https://api.douban.com/v2/movie/new_movies?apikey=0df993c66c0c636e29ecbb5344252a4a', true);
+    
+        xhr.open("get","https://www.baidu.com/",true);
+        //3 发送请求
+        xhr.send();
+        //4 监听事件
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

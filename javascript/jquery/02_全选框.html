@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全选框</title>
+
+    <script src="jquery-3.4.1.js"></script>
+
+    <style>
+        th,
+        td {
+            width: 50px;
+            height: 30px;
+            background: deepskyblue;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>黄忠</th>
+                <th>80</th>
+                <th>拆迁</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>关羽</th>
+                <th>70</th>
+                <th>骑马</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>赵云</th>
+                <th>800</th>
+                <th>射箭</th>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        $('thead input').change(function () {
+            var isChecked = $(this).prop('checked');
+
+            $('tbody input').prop('checked', isChecked);
+        })
+
+        $('tbody input').change(function () {
+            var allCount = $('tbody input').length;
+            var checkCount = $('tbody input:checked').length;
+            var isAllChecked = allCount === checkCount;
+            $('thead input').prop('checked', isAllChecked);
+        })
+
+    </script>
+</body>
+
+</html>

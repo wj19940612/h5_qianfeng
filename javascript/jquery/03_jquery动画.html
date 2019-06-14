@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画</title>
+    <script src="jquery-3.4.1.js"></script>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <div></div>
+    <script>
+        $('button:first').click(function () {
+            var div = $('div');
+            // div.show(3000);
+            // div.fadeIn(3000);
+            // div.slideDown();
+            div.animate({
+                width: 500,
+                height: 600,
+            })
+        })
+
+        $('button:last').click(function () {
+            var div = $('div');
+            // div.hide(3000);
+            // div.fadeOut(3000);
+            // div.slideUp();
+            div.animate({
+                width: 200,
+                height: 200,
+            })
+        })
+    </script>
+</body>
+
+</html>

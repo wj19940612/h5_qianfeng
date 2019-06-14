@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function Person() {
+
+        }
+
+        Person.prototype.name = "溺水的鱼";
+        Person.prototype.age = 18;
+        Person.prototype.sayHello = function () {
+            alert(this.name);
+        }
+
+        function Student() {
+
+        }
+
+        Student.prototype = Object.create(Person.prototype);
+
+        var student = new Student();
+        student.sayHello();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

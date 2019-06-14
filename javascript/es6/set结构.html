@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>set结构</title>
+
+    <script type="text/javascript">
+
+        var set = new Set([1, 1, 2, 2, 3, 4]);
+        console.log(set);  //Set(4) {1, 2, 3, 4}
+
+    
+
+        //扩展运算符
+        var arr = [...set];  //将set转为数组
+        console.log(arr); //(4) [1, 2, 3, 4]
+
+        for(let i of set){
+            console.log(i);
+        }
+
+        console.log(set.has(6)); //false
+        // set.add(0);
+        // set.delete(1);
+
+        // for( let item of set.keys()){
+        //     console.log(item);
+        // }
+
+        // for( let item of set.values()){
+        //     console.log(item);
+        // }
+
+            for(let [key,item] of set.entries()){
+                console.log(key,item);
+            }
+            
+            set.forEach((item,key)=>{
+                console.log(item,key);
+            })
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
